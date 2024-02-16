@@ -1,0 +1,531 @@
+/* Pour tous le doc */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
+}
+h1 {
+  text-align: center;
+  padding: 5px;
+  font-size: 3.5vw;
+}
+
+/* NavBar */
+.navbar {
+  position: fixed;
+  padding: 5px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(132, 126, 126, 0.6);
+  z-index: 3;
+}
+
+.navbar a {
+  color: black;
+}
+
+.navbar .logo {
+  width: 120px;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+}
+
+.navbar .nav-links ul li {
+  margin: 0 25px;
+}
+
+.navbar .nav-links ul li:hover a {
+  text-decoration: underline;
+}
+
+.navbar .menu_burger {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 30px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 5px;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    background-color: rgba(132, 126, 126, 0.336);
+  }
+
+  .navbar .logo {
+    position: absolute;
+    left: 10px;
+    width: 50px;
+  }
+
+  .navbar .menu_burger {
+    display: block;
+  }
+
+  .nav-links {
+    top: 0;
+    left: 0;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    background-color: rgba(132, 126, 126, 0.336);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links.mobile-menu {
+    margin-left: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.2em;
+  }
+}
+
+/* Acceuil */
+
+.introduction {
+  position: relative;
+  text-align: center;
+}
+
+.introduction .fond-acceuil {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction .ordi {
+  width: 100%;
+  height: auto;
+}
+
+.introduction .name-title {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  font-size: 100%;
+  transform: translate(-50%, -50%);
+}
+
+/* A propos de moi */
+
+#about {
+  margin: 5px 80px;
+  padding: 10px;
+  font-size: 1.8vw;
+}
+
+#about p {
+  padding: 5px;
+}
+
+@media (max-width: 900px) {
+  #about {
+    margin: 5px 20px;
+    font-size: 2.8vw;
+  }
+}
+
+/* Image de fond Boulot cherche */
+
+#job_search {
+  position: relative;
+}
+
+#job_search .img-fond {
+  width: 100%;
+  height: 30vh;
+}
+
+#job_search p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 2.8vw;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  #job_search .img-fond {
+    width: 100%;
+    height: 25vh;
+  }
+
+  #job_search p {
+    margin: 5px 10px;
+    font-size: 3.8vw;
+  }
+}
+
+/* Compétences */
+
+#skills-section {
+  margin: 5px 20px;
+}
+
+#skills-section .logo {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#skills-section img {
+  width: 100px;
+  margin: 5px 80px;
+  padding: 10px;
+  filter: grayscale();
+  transition: filter 1s ease-in-out;
+}
+
+/* #skills-section img:hover {
+  filter: none;
+} */
+
+@media (max-width: 900px) {
+  #skills-section img {
+    width: 75px;
+    margin: 5px 10px;
+    padding: 10px;
+  }
+}
+
+/* Formation */
+
+#experiences-section {
+  background-image: url("/Assets/Img_fond.jpg");
+  width: 100%;
+  padding: 10px;
+  object-fit: cover;
+}
+
+#experiences-section h1 {
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+.container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  z-index: 2;
+}
+.text-box {
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+  z-index: 3;
+}
+.text-box h2 {
+  font-size: 1.8vw;
+}
+.text-box p {
+  font-size: 1.5vw;
+}
+.text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.left-container {
+  left: 0;
+}
+.right-container {
+  left: 50%;
+}
+.container img {
+  position: absolute;
+  background-color: white;
+  padding: 4px;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 2;
+}
+
+.right-container img {
+  left: -20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: black;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -15px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -15px;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline {
+    margin: 50px auto;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box h2 {
+    font-size: 2.8vw;
+  }
+  .text-box p {
+    font-size: 2.5vw;
+  }
+  .text-box small {
+    margin-bottom: 10px;
+    font-size: 2.3vw;
+  }
+  .right-container {
+    left: 0;
+  }
+  .left-container img,
+  .right-container img {
+    left: 30px;
+    transform: translateX(-50%);
+  }
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+}
+
+/* PortFolio */
+#portfolio-section {
+  text-align: center;
+}
+.card_contain {
+  margin-top: 50px;
+}
+.card-portfolio {
+  display: inline-block;
+  margin: -30px 30px;
+  width: 40%;
+  height: 30%;
+  filter: grayscale();
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 5px rgb(163, 161, 161);
+}
+
+.card-portfolio:hover {
+  filter: none;
+}
+
+.card-portfolio .hover_contain {
+  font-size: 1.5vw;
+  background-color: rgba(210, 209, 209, 0.8);
+  visibility: hidden;
+  padding: 10px;
+}
+
+.card-portfolio .text-contain {
+  position: relative;
+  padding: 5px;
+}
+
+.card-portfolio:hover .hover_contain {
+  transform: translateY(-102%);
+  transition: all 0.2s ease-out 0.2s;
+  visibility: visible;
+}
+
+.hover_contain .logo_git {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  right: 5%;
+  bottom: 35%;
+}
+
+.card-portfolio button {
+  justify-content: center;
+  cursor: pointer;
+  margin: 5px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+  font-size: 1.2vw;
+  padding: 8px;
+}
+
+.card-portfolio button:hover {
+  background-color: rgb(160, 160, 160);
+}
+
+@media screen and (max-width: 900px) {
+  .card-portfolio {
+    width: 80%;
+    height: 30%;
+  }
+  .card-portfolio .hover_contain {
+    font-size: 2.8vw;
+  }
+  .hover_contain .logo_git {
+    width: 10%;
+    height: auto;
+  }
+  .card-portfolio button {
+    font-size: 1.8vw;
+  }
+}
+
+/* Contact */
+
+#contact-section {
+  background-image: url("/Assets/Img_fond.jpg");
+  padding: 5px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 30px 200px;
+  padding: 10px;
+  box-shadow: 0px 2px 5px grey;
+}
+
+.name-container,
+.mail {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+input,
+textarea {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: rgba(210, 209, 209, 0.862);
+  border: 2px rgb(210, 209, 209) solid;
+  width: calc(50% - 5px);
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  width: 100%;
+}
+
+.contact-form p {
+  align-self: left;
+  color: grey;
+}
+
+.submit_mail {
+  background-color: grey;
+  border: 2px grey solid;
+  cursor: pointer;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+}
+
+.logo_reseaux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_reseaux img {
+  width: 50px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-form {
+    margin: 30px 20px;
+  }
+  .logo_reseaux img {
+    width: 40px;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
